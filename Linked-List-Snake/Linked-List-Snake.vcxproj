@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>17.0</VCProjectVersion>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{648c7e22-8851-4e0d-aecf-ee8062b9a2af}</ProjectGuid>
+    <RootNamespace>LinkedListSnake</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(SolutionDir)sfml\include; $(SolutionDir)\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>$(SolutionDir)sfml\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>sfml-graphics-d.lib;sfml-window-d.lib;sfml-network-d.lib;sfml-audio-d.lib;sfml-system-d.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(SolutionDir)sfml\include; $(SolutionDir)\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>$(SolutionDir)sfml\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>sfml-graphics-d.lib;sfml-window-d.lib;sfml-network-d.lib;sfml-audio-d.lib;sfml-system-d.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="source\LinkedListLib\DoubleLinked\DoubleLinkedList.cpp" />
+    <ClCompile Include="source\UI\LinkedListUI\LinkedListSelectionUIController.cpp" />
+    <ClCompile Include="source\LinkedListLib\LinkedList.cpp" />
+    <ClCompile Include="source\UI\Credits\CreditsScreenUIController.cpp" />
+    <ClCompile Include="source\Food\FoodItem.cpp" />
+    <ClCompile Include="source\Food\FoodService.cpp" />
+    <ClCompile Include="source\LinkedListLib\SingleLinked\SingleLinkedList.cpp" />
+    <ClCompile Include="source\Player\SnakeController.cpp" />
+    <ClCompile Include="source\Player\PlayerService.cpp" />
+    <ClCompile Include="source\Time\TimeService.cpp" />
+    <ClCompile Include="source\Element\ElementService.cpp" />
+    <ClCompile Include="source\Element\Obstacle.cpp" />
+    <ClCompile Include="source\Player\BodyPart.cpp" />
+    <ClCompile Include="source\UI\GameplayUI\GameplayUIController.cpp" />
+    <ClCompile Include="source\UI\UIElement\RectangleShapeView.cpp" />
+    <ClCompile Include="source\Level\LevelController.cpp" />
+    <ClCompile Include="source\Level\LevelModel.cpp" />
+    <ClCompile Include="source\UI\LevelSelection\LevelSelectionUIController.cpp" />
+    <ClCompile Include="source\Level\LevelView.cpp" />
+    <ClCompile Include="source\Level\LevelService.cpp" />
+    <ClCompile Include="source\UI\Instructions\InstructionsScreenUIController.cpp" />
+    <ClCompile Include="source\UI\UIElement\AnimatedImageView.cpp" />
+    <ClCompile Include="source\UI\UIElement\ButtonView.cpp" />
+    <ClCompile Include="source\Global\Config.cpp" />
+    <ClCompile Include="source\Event\EventService.cpp" />
+    <ClCompile Include="source\Main\GameService.cpp" />
+    <ClCompile Include="source\Graphics\GraphicService.cpp" />
+    <ClCompile Include="source\UI\UIElement\ImageView.cpp" />
+    <ClCompile Include="source\UI\MainMenu\MainMenuUIController.cpp" />
+    <ClCompile Include="source\Global\ServiceLocator.cpp" />
+    <ClCompile Include="source\Sound\SoundService.cpp" />
+    <ClCompile Include="source\UI\SplashScreen\SplashScreenUIController.cpp" />
+    <ClCompile Include="source\UI\UIElement\TextView.cpp" />
+    <ClCompile Include="source\UI\UIService.cpp" />
+    <ClCompile Include="source\UI\UIElement\UIView.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="include\Level\LevelConfig.h" />
+    <ClInclude Include="include\LinkedListLib\DoubleLinked\DoubleLinkedList.h" />
+    <ClInclude Include="include\LinkedListLib\DoubleLinked\DoubleNode.h" />
+    <ClInclude Include="include\UI\LinkedListUI\LinkedListSelectionUIController.h" />
+    <ClInclude Include="include\LinkedListLib\LinkedList.h" />
+    <ClInclude Include="include\LinkedListLib\SingleLinked\SingleNode.h" />
+    <ClInclude Include="include\UI\Credits\CreditsScreenUIController.h" />
+    <ClInclude Include="include\Food\FoodItem.h" />
+    <ClInclude Include="include\Food\FoodService.h" />
+    <ClInclude Include="include\Food\FoodType.h" />
+    <ClInclude Include="include\LinkedListLib\Node.h" />
+    <ClInclude Include="include\LinkedListLib\SingleLinked\SingleLinkedList.h" />
+    <ClInclude Include="include\Element\ElementData.h" />
+    <ClInclude Include="include\Element\ElementService.h" />
+    <ClInclude Include="include\Element\Obstacle.h" />
+    <ClInclude Include="include\Player\BodyPart.h" />
+    <ClInclude Include="include\Player\SnakeController.h" />
+    <ClInclude Include="include\Player\PlayerService.h" />
+    <ClInclude Include="include\Level\LevelController.h" />
+    <ClInclude Include="include\Level\LevelData.h" />
+    <ClInclude Include="include\Level\LevelModel.h" />
+    <ClInclude Include="include\UI\LevelSelection\LevelSelectionUIController.h" />
+    <ClInclude Include="include\Level\LevelView.h" />
+    <ClInclude Include="include\Level\LevelService.h" />
+    <ClInclude Include="include\UI\UIElement\RectangleShapeView.h" />
+    <ClInclude Include="include\UI\Instructions\InstructionsScreenUIController.h" />
+    <ClInclude Include="include\UI\UIElement\AnimatedImageView.h" />
+    <ClInclude Include="include\UI\UIElement\ButtonView.h" />
+    <ClInclude Include="include\Global\Config.h" />
+    <ClInclude Include="include\Event\EventService.h" />
+    <ClInclude Include="include\Main\GameService.h" />
+    <ClInclude Include="include\Graphics\GraphicService.h" />
+    <ClInclude Include="include\UI\UIElement\ImageView.h" />
+    <ClInclude Include="include\UI\Interface\IUIController.h" />
+    <ClInclude Include="include\UI\MainMenu\MainMenuUIController.h" />
+    <ClInclude Include="include\Global\ServiceLocator.h" />
+    <ClInclude Include="include\Sound\SoundService.h" />
+    <ClInclude Include="include\UI\SplashScreen\SplashScreenUIController.h" />
+    <ClInclude Include="include\UI\UIElement\TextView.h" />
+    <ClInclude Include="include\UI\UIService.h" />
+    <ClInclude Include="include\UI\UIElement\UIView.h" />
+    <ClInclude Include="include\UI\GameplayUI\GameplayUIController.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
